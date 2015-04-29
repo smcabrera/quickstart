@@ -130,6 +130,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    high_voltage (2.3.0)
     hike (1.2.3)
     hirb (0.7.3)
     hitimes (1.2.2)
@@ -332,6 +333,7 @@ DEPENDENCIES
   guard-rspec
   haml-lint
   haml-rails (= 0.9.0)
+  high_voltage (= 2.3.0)
   jazz_fingers
   jbuilder (~> 2.0)
   jquery-rails

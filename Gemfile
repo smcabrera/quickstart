@@ -11,6 +11,7 @@ gem 'factory_girl_rails', '4.5.0'
 gem 'faker', '~> 1.4.3'
 gem 'figaro', '1.0'
 gem 'haml-rails', '0.9.0'
+gem 'high_voltage', '2.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'nav_lynx', '1.1.1'
@@ -40,4 +41,5 @@ group :development do
   gem 'spring', '1.3.3'
   gem 'spring-commands-rspec', '~> 1.0.0', group: :test
 end
+
 
