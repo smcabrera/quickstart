@@ -7,12 +7,12 @@ module ApplicationHelper
     end
   end
 
-  def app_name
-    "My App"
-  end
-
   def bootstrap_flash(key)
     {"notice" => "success", "error" => "danger", "alert" => "warning"}.fetch(key)
+  end
+
+  def app_name
+    "My App"
   end
 
   def company_name

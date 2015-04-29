@@ -13,26 +13,9 @@ require 'spec_helper'
 # end
 
 RSpec.describe ApplicationHelper, type: :helper do
-  describe "#markdown" do
-    it "returns markdown text as html" do
-      text = "This is some *interesting* text"
-      html = "<p>This is some <em>interesting</em> text</p>\n"
-      expect(markdown(text)).to eq(html)
-    end
-  end
-
-  describe "#disable_class" do
-
-    xit 'returns "disable" if role is equal to user.role' do
-      # TODO: Figure out why this mock isn't working for me
-      allow(user).to receive(:role).and_return("premium")
-      expect(disable_class @user, "premium" ).to eq("disabled")
-    end
-
-    xit 'returns "" if role is not equal to user.role' do
-      # TODO: Figure out why this mock isn't working for me
-      allow(user).to receive(:role).and_return("premium")
-      expect(disable_class @user, "free" ).to eq("")
+  describe "#method_name" do
+    xit "does stuff" do
     end
   end
 end
+
