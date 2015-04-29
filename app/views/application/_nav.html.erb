@@ -1,57 +1,49 @@
-<div class="container">
-  <div class="header clearfix">
-    <nav>
-      <ul class="nav nav-pills pull-right">
-        <li role="presentation">
-          <%= nav_link_to 'About', about_path, {}, {:wrapper => 'li'} %>
-        </li>
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation">
+            <%= nav_link_to 'Home', root_path, {}, {:wrapper => 'li'} %>
+          </li>
 
-        <li role="presentation">
-          <%= nav_link_to "Contact", contact_path, {}, {:wrapper => 'li'} %>
-        </li>
+          <li role="presentation">
+            <%= nav_link_to 'About', page_path('about'), {}, {:wrapper => 'li'} %>
+          </li>
 
-        <li role="presentation">
-          <% if current_user %>
-            <%= link_to edit_user_registration_path, class: "btn" do %>
-              <span class="glyphicon glyphicon-user"> Settings</span>
+          <li role="presentation">
+            <%= nav_link_to 'Contact', page_path('contact'), {}, {:wrapper => 'li'} %>
+          </li>
+
+          <li role="presentation">
+            <% if current_user %>
+              <%= link_to edit_user_registration_path, class: "btn" do %>
+                <span class="glyphicon glyphicon-user"> Settings</span>
+              <% end %>
             <% end %>
-          <% else %>
-            <%= link_to new_user_registration_path, class: "btn" do %>
-              Sign up
+          </li>
+
+          <li>
+            <% if current_user %>
+              <%= link_to destroy_user_session_path, method: :delete, class: 'btn', id: "signout"  do %>
+                <span class="glyphicon glyphicon-log-out">
+                  Logout
+                </span>
+              <% end %>
+            <% else %>
+              <%= link_to new_user_session_path, class: "btn" do %>
+                <span class="glyphicon glyphicon-log-in">
+                  Login
+                </span>
+              <% end %>
             <% end %>
-          <% end %>
-        </li>
+          </li>
+        </ul>
 
-        <li>
-          <% if current_user %>
-            <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-sm', id: "signout"  do %>
-              <span class="glyphicon glyphicon-log-out">
-                Logout
-
-                <%#<span class="sr-only">%>
-                  <%#Logout%>
-                <%#</span>%>
-              </span>
-            <% end %>
-          <% else %>
-            <%= link_to new_user_session_path, class: "btn btn-sm" do %>
-              <span class="glyphicon glyphicon-log-in">
-                Login
-              </span>
-
-              <%#<span class="sr-only">%>
-                <%#Login%>
-              <%#</span>%>
-            <% end %>
-          <% end %>
-        </li>
-
-      </ul>
-
-    </nav>
-    <h3 class="text-muted"><%= link_to app_name, root_path %></h3>
-
-  </div>
-</div>
+      </nav>
+      <%= link_to  root_path do %>
+        <h3 class="text-muted">
+          <%= app_name %>
+        </h3>
+      <% end %>
+    </div>
 
 
