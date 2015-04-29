@@ -1,20 +1,30 @@
-#!/bin/sh
+#!/bin/bash
 
 # Set up Rails app. Run this script immediately after cloning the codebase.
 #
 
-echo "This script sets up the dependencies and the database for the project"
-echo "I stole this (excellent) idea from thoughtbot, see their article about it here:"
-echo "https://robots.thoughtbot.com/bin-setup"
+# This script sets up the dependencies and the database for the project
+# I stole this (excellent) idea from thoughtbot, see their article about it here:
+# https://robots.thoughtbot.com/bin-setup
+
 
 # Set up Ruby dependencies
 bundle install
 
-# If the app isn't on heroku yet, run
-heroku create my-app
+# Give the app a name and set it up on heroku
+echo "What do you want to call this app?"
+read app_name
 
-# Set up production git remote
-git remote add production git@heroku.com:my-app.git
+# If the app isn't on heroku yet, run
+if ! heroku create $app_name; then
+  echo "That names already taken (possibly by you!). Create a git remote anyway?"
+  select yn in "Yes" "No"; do
+      case $yn in
+          Yes) git remote add heroku https://git.heroku.com/$app_name.git; break;;
+          No) break;;
+      esac
+  done
+fi
 
 # Set up database (migration and seeds)
 bundle exec rake db:setup

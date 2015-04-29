@@ -48884,3 +48884,329 @@ Processing by HighVoltage::PagesController#show as HTML
   Rendered application/_notices.html.haml (0.2ms)
   Rendered application/_footer.html.haml (0.2ms)
 Completed 200 OK in 230ms (Views: 229.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 15:10:15 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/stephen/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.7/lib/rails/templates/rails/welcome/index.html.erb (0.8ms)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 15:10:17 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/stephen/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.1.7/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 15:10:20 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+  Rendered application/_nav.html.erb (14.4ms)
+  Rendered application/_notices.html.haml (0.8ms)
+  Rendered application/_footer.html.haml (0.6ms)
+Completed 200 OK in 365ms (Views: 362.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 15:10:38 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered application/_nav.html.erb (4.4ms)
+  Rendered application/_notices.html.haml (0.2ms)
+  Rendered application/_footer.html.haml (0.5ms)
+Completed 200 OK in 557ms (Views: 555.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 15:10:40 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered application/_nav.html.erb (4.3ms)
+  Rendered application/_notices.html.haml (0.3ms)
+  Rendered application/_footer.html.haml (0.2ms)
+Completed 200 OK in 250ms (Views: 248.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2015-04-29 15:10:42 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.1ms)
+  Rendered application/_nav.html.erb (5.7ms)
+  Rendered application/_notices.html.haml (0.2ms)
+  Rendered application/_footer.html.haml (0.2ms)
+Completed 200 OK in 222ms (Views: 221.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for 127.0.0.1 at 2015-04-29 15:10:43 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendered pages/contact.html.erb within layouts/application (0.2ms)
+  Rendered application/_nav.html.erb (4.4ms)
+  Rendered application/_notices.html.haml (0.2ms)
+  Rendered application/_footer.html.haml (0.2ms)
+Completed 200 OK in 233ms (Views: 232.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (13.5ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar(255), "name" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (15.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (12.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'stephen.m.cabrera@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:12:08.038493"], ["created_at", "2015-04-29 20:12:08.077927"], ["email", "stephen.m.cabrera@gmail.com"], ["encrypted_password", "$2a$10$awu1GNDwpq5drhUJonNsAeqxlLxmri4FfH7QPi/.Bt8rEa/b9XLRO"], ["name", "Stephen"], ["updated_at", "2015-04-29 20:12:08.077927"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'delilah.turner@prohaska.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:12:09.150764"], ["created_at", "2015-04-29 20:12:09.156676"], ["email", "delilah.turner@prohaska.info"], ["encrypted_password", "$2a$10$0Vqm1wg0nxPab5XNplaJset268zXqm2y7OXoOffElv1ZZGVNSmGn."], ["name", "Willow Hilpert"], ["updated_at", "2015-04-29 20:12:09.156676"]]
+  [1m[35m (17.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'uriah.murray@nitzschekreiger.org' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:12:09.330074"], ["created_at", "2015-04-29 20:12:09.331659"], ["email", "uriah.murray@nitzschekreiger.org"], ["encrypted_password", "$2a$10$Hh79fY7Xfyzjp.RhoqVNQO5dOSyPUhgoyq/7UMmHO8ftUhq3HW39O"], ["name", "Dr. Kamryn Mills"], ["updated_at", "2015-04-29 20:12:09.331659"]]
+  [1m[35m (8.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'stephanie.kunze@kautzer.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:12:09.570706"], ["created_at", "2015-04-29 20:12:09.572339"], ["email", "stephanie.kunze@kautzer.info"], ["encrypted_password", "$2a$10$l30B94XAGAMe73qEKTazHugiDs4js0ezjJ6pK/foK2OJe6EZ/zgWS"], ["name", "Nia Ratke"], ["updated_at", "2015-04-29 20:12:09.572339"]]
+  [1m[35m (7.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jasen@lind.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:12:09.746337"], ["created_at", "2015-04-29 20:12:09.748071"], ["email", "jasen@lind.info"], ["encrypted_password", "$2a$10$88GJqeNcP/Io9Jd1geQB0OAWHWs.Fpz5IriHHWzwdi8jeQyPRopay"], ["name", "Alize Jakubowski"], ["updated_at", "2015-04-29 20:12:09.748071"]]
+  [1m[35m (12.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'emmie_langworth@lesch.biz' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:12:09.961381"], ["created_at", "2015-04-29 20:12:09.963009"], ["email", "emmie_langworth@lesch.biz"], ["encrypted_password", "$2a$10$RNZiPCW.Ni/ofwPSC.Go.OY3KhziPahvXBgPnFUfPAdY6RuuftHg2"], ["name", "Daisy Ankunding IV"], ["updated_at", "2015-04-29 20:12:09.963009"]]
+  [1m[35m (9.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[36m (26.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar(255), "name" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (8.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (11.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'stephen.m.cabrera@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:28:41.187503"], ["created_at", "2015-04-29 20:28:41.243759"], ["email", "stephen.m.cabrera@gmail.com"], ["encrypted_password", "$2a$10$6Vdc5SqoA7vZsM3cZKP/wufH/lJJNMgUVf.Cjkvr0XsLNNMNi8VM2"], ["name", "Stephen"], ["updated_at", "2015-04-29 20:28:41.243759"]]
+  [1m[35m (10.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'bailey.bartell@keebler.name' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:28:41.925019"], ["created_at", "2015-04-29 20:28:41.926792"], ["email", "bailey.bartell@keebler.name"], ["encrypted_password", "$2a$10$2e5BwBfWwYAO3u6NFXPVhe8WHtky1rdLdL8EF1b53a4pA/.FpRa4y"], ["name", "Creola Harber"], ["updated_at", "2015-04-29 20:28:41.926792"]]
+  [1m[35m (10.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'mckenna.brown@hudsonbarrows.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:28:42.090099"], ["created_at", "2015-04-29 20:28:42.091729"], ["email", "mckenna.brown@hudsonbarrows.info"], ["encrypted_password", "$2a$10$8fuxMFvJoWW42.8hP/l1WOgUnUAlUS47T1N4OIuV4Yb7JDHfNDQz."], ["name", "Mrs. Dayna Padberg"], ["updated_at", "2015-04-29 20:28:42.091729"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'christiana_stokes@stokesyost.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:28:42.252195"], ["created_at", "2015-04-29 20:28:42.253835"], ["email", "christiana_stokes@stokesyost.info"], ["encrypted_password", "$2a$10$aPrGclodrVd8kJF/tLake.ggbGkJldtpI1YbKc.rJWz7GbDeuSBhC"], ["name", "Elinor Ankunding"], ["updated_at", "2015-04-29 20:28:42.253835"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'modesta.ohara@steuberjerde.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:28:42.413008"], ["created_at", "2015-04-29 20:28:42.414652"], ["email", "modesta.ohara@steuberjerde.info"], ["encrypted_password", "$2a$10$vRNbzaS.4ocWpfK4ceDnZOAaSMInMLOyP8YxSQpAdGXHGtFOwijfW"], ["name", "Miss Summer Gerhold"], ["updated_at", "2015-04-29 20:28:42.414652"]]
+  [1m[35m (9.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'isaac.lesch@ruel.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:28:42.580232"], ["created_at", "2015-04-29 20:28:42.581855"], ["email", "isaac.lesch@ruel.net"], ["encrypted_password", "$2a$10$kCUk3aPSfpzffBIbgqGC2uzh8sbv6.XtxEoGHGp7R/n5t4K2O/7aC"], ["name", "Miss Devonte Daniel"], ["updated_at", "2015-04-29 20:28:42.581855"]]
+  [1m[35m (7.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[36m (19.9ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar(255), "name" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (12.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (12.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'stephen.m.cabrera@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:29:18.764079"], ["created_at", "2015-04-29 20:29:18.786194"], ["email", "stephen.m.cabrera@gmail.com"], ["encrypted_password", "$2a$10$UlfnF5nCFvDd4x8kE.V6meXgabF63x1X/tEksaOYRowurWFZlZSSi"], ["name", "Stephen"], ["updated_at", "2015-04-29 20:29:18.786194"]]
+  [1m[35m (18.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'stanley@hayes.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:29:19.387701"], ["created_at", "2015-04-29 20:29:19.389539"], ["email", "stanley@hayes.info"], ["encrypted_password", "$2a$10$9uwrwhBllsW6NcUkQ2f//Otfv42S2e7gedymlVguftE7eEPwIolru"], ["name", "Mayra Langworth"], ["updated_at", "2015-04-29 20:29:19.389539"]]
+  [1m[35m (8.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'janiya@moore.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:29:19.553141"], ["created_at", "2015-04-29 20:29:19.554746"], ["email", "janiya@moore.net"], ["encrypted_password", "$2a$10$wgrxOJupDZQdYkNSPHuGBOEOqey1Oh/yXMu8OAKD6bXFYw8lbxF9a"], ["name", "Jaiden McCullough"], ["updated_at", "2015-04-29 20:29:19.554746"]]
+  [1m[35m (10.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'freeda_schaden@jast.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:29:19.717620"], ["created_at", "2015-04-29 20:29:19.719258"], ["email", "freeda_schaden@jast.com"], ["encrypted_password", "$2a$10$LrrEM.3aZUppVXs0o1mW7.xOyIv5P.BB95UmwitUHB7n07ceqUYrG"], ["name", "Jason Hegmann"], ["updated_at", "2015-04-29 20:29:19.719258"]]
+  [1m[35m (14.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'prudence@wisoky.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:29:19.883041"], ["created_at", "2015-04-29 20:29:19.884676"], ["email", "prudence@wisoky.info"], ["encrypted_password", "$2a$10$beZT/ozqjBqoWSOEHxliHufNhkFw722acCPMEIXAarcQq2z3/3mSu"], ["name", "Jaylon Smitham Sr."], ["updated_at", "2015-04-29 20:29:19.884676"]]
+  [1m[35m (21.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'juana@breitenberggleichner.biz' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:29:20.056357"], ["created_at", "2015-04-29 20:29:20.057958"], ["email", "juana@breitenberggleichner.biz"], ["encrypted_password", "$2a$10$c/wtaCZ7fdGkQV9VUMN2FuCGUaUVB0H0yykCwyKv.X7Qv4OzLSw9u"], ["name", "Alanis Toy"], ["updated_at", "2015-04-29 20:29:20.057958"]]
+  [1m[35m (13.6ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[36m (19.9ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (9.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar(255), "name" varchar(255)) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'stephen.m.cabrera@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:31:00.253280"], ["created_at", "2015-04-29 20:31:00.292769"], ["email", "stephen.m.cabrera@gmail.com"], ["encrypted_password", "$2a$10$UIvlCXGMyRSNn5AP36sLQ.kiBI5SIIQ/gqWCgEABKqXSAJJQ5OJSu"], ["name", "Stephen"], ["updated_at", "2015-04-29 20:31:00.292769"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ashly.lubowitz@von.name' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:31:01.160105"], ["created_at", "2015-04-29 20:31:01.161963"], ["email", "ashly.lubowitz@von.name"], ["encrypted_password", "$2a$10$lj4CMo88rGskqD33daQ/5eF5ZUz3cveVkITYnrgsJXcJEgR7BcBAy"], ["name", "Durward Moore"], ["updated_at", "2015-04-29 20:31:01.161963"]]
+  [1m[35m (8.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'desiree@rowe.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:31:01.326387"], ["created_at", "2015-04-29 20:31:01.328038"], ["email", "desiree@rowe.com"], ["encrypted_password", "$2a$10$vIkk2f1ZaIaluNXxaHLPOOPl2wWZLmozeEVpZRfQ.fiz67fOEYsoG"], ["name", "Earlene Stehr V"], ["updated_at", "2015-04-29 20:31:01.328038"]]
+  [1m[35m (13.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lexus@klockohand.info' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:31:01.498441"], ["created_at", "2015-04-29 20:31:01.500022"], ["email", "lexus@klockohand.info"], ["encrypted_password", "$2a$10$VSV6pvke9jhRjERYgoZz7Og23H7wbqLLmGnKLLgCtp5YXr/jzmdCS"], ["name", "Mr. Oswald Wolf"], ["updated_at", "2015-04-29 20:31:01.500022"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'emmy.auer@okuneva.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:31:01.667388"], ["created_at", "2015-04-29 20:31:01.669383"], ["email", "emmy.auer@okuneva.com"], ["encrypted_password", "$2a$10$gwiLHHLYHnpC5r953sId4OKfWYSoS5GuAZZZwhEgiWqdOAHS2lxjy"], ["name", "Marjorie Fritsch"], ["updated_at", "2015-04-29 20:31:01.669383"]]
+  [1m[35m (13.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'emery_cartwright@bins.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["confirmed_at", "2015-04-29 20:31:01.871808"], ["created_at", "2015-04-29 20:31:01.873583"], ["email", "emery_cartwright@bins.com"], ["encrypted_password", "$2a$10$sy92bEUEPDUHsVOhjrgqjuJwx3muYs/sHOQEHfes12f5bGhLcOVi2"], ["name", "Ellis Romaguera MD"], ["updated_at", "2015-04-29 20:31:01.873583"]]
+  [1m[35m (10.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2015-04-29 16:45:24 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (12.3ms)
+  Rendered application/_nav.html.erb (7.6ms)
+  Rendered application/_notices.html.haml (0.4ms)
+  Rendered application/_footer.html.haml (0.2ms)
+Completed 200 OK in 738ms (Views: 719.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2015-04-29 16:56:18 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (2.7ms)
+  Rendered application/_nav.html.erb (38.2ms)
+  Rendered application/_notices.html.haml (3.0ms)
+  Rendered application/_footer.html.haml (1.7ms)
+Completed 200 OK in 1163ms (Views: 1134.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for 127.0.0.1 at 2015-04-29 16:56:25 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendered pages/contact.html.erb within layouts/application (3.2ms)
+  Rendered application/_nav.html.erb (27.9ms)
+  Rendered application/_notices.html.haml (2.9ms)
+  Rendered application/_footer.html.haml (0.9ms)
+Completed 200 OK in 1619ms (Views: 1587.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2015-04-29 16:56:35 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (7.5ms)
+  Rendered application/_nav.html.erb (33.6ms)
+  Rendered application/_notices.html.haml (3.7ms)
+  Rendered application/_footer.html.haml (3.0ms)
+Completed 200 OK in 947ms (Views: 922.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-29 16:56:38 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered application/_nav.html.erb (20.5ms)
+  Rendered application/_notices.html.haml (0.9ms)
+  Rendered application/_footer.html.haml (0.3ms)
+Completed 200 OK in 728ms (Views: 717.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2015-04-29 16:56:42 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (0.2ms)
+  Rendered application/_nav.html.erb (12.8ms)
+  Rendered application/_notices.html.haml (1.2ms)
+  Rendered application/_footer.html.haml (0.7ms)
+Completed 200 OK in 345ms (Views: 336.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2015-04-29 17:01:04 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (1.9ms)
+  Rendered application/_nav.html.erb (29.5ms)
+  Rendered application/_notices.html.haml (1.4ms)
+  Rendered application/_footer.html.haml (0.9ms)
+Completed 200 OK in 1327ms (Views: 1272.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2015-04-29 17:01:31 -0500
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"about"}
+  Rendered pages/about.html.erb within layouts/application (8.8ms)
+  Rendered application/_nav.html.erb (37.5ms)
+  Rendered application/_notices.html.haml (2.7ms)
+  Rendered application/_footer.html.haml (1.2ms)
+Completed 200 OK in 898ms (Views: 860.6ms | ActiveRecord: 0.0ms)
