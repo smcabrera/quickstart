@@ -26,5 +26,8 @@ if ! heroku create $app_name; then
   done
 fi
 
+# Push up to heroku
+git push heroku master
+
 # Set up database (migration and seeds)
 bundle exec rake db:setup
