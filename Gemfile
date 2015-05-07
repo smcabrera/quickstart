@@ -17,7 +17,6 @@ gem 'jquery-rails'
 gem 'nav_lynx', '1.1.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
@@ -40,6 +39,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'spring', '1.3.3'
   gem 'spring-commands-rspec', '~> 1.0.0', group: :test
+  gem 'sqlite3'
 end
 
 
