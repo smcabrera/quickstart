@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.7'
+gem 'rails', '4.2.0'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
@@ -34,7 +34,7 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'haml-lint', require: false
   gem 'jazz_fingers', group: :test
-  gem 'quiet_assets', '1.1.0'
+  gem 'quiet_assets'
   gem 'rspec-rails', group: :test
   gem 'rubocop', require: false
   gem 'spring', '1.3.3'
