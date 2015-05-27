@@ -5,7 +5,7 @@ gem 'rails', '4.2.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'devise', '3.4.1'
+gem 'devise', '3.5.1'
 gem 'factory_girl', '4.5.0'
 gem 'factory_girl_rails', '4.5.0'
 gem 'faker', '~> 1.4.3'
@@ -41,5 +41,3 @@ group :development do
   gem 'spring-commands-rspec', '~> 1.0.0', group: :test
   gem 'sqlite3'
 end
-
-

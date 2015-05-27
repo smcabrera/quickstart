@@ -49210,3 +49210,57 @@ Processing by HighVoltage::PagesController#show as HTML
   Rendered application/_notices.html.haml (2.7ms)
   Rendered application/_footer.html.haml (1.2ms)
 Completed 200 OK in 898ms (Views: 860.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.5ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar) 
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  DROP TABLE "users"
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'stephen.m.cabrera@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Stephen"], ["email", "stephen.m.cabrera@gmail.com"], ["encrypted_password", "$2a$10$.fFbgsO6fsXKUXcIQf6Uu.faWRm0b0GmHo0BPhtp9y9VvdK8/e6Me"], ["confirmed_at", "2015-05-27 20:32:34.637017"], ["created_at", "2015-05-27 20:32:34.668798"], ["updated_at", "2015-05-27 20:32:34.668798"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kamille_morar@heaney.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Miss Isabel Stokes"], ["email", "kamille_morar@heaney.com"], ["encrypted_password", "$2a$10$68FT3hiLlHb/DVI.HyNZ5.uAQc9KxTiAL.2GUD3S3t3DxsnmZwJmq"], ["confirmed_at", "2015-05-27 20:32:35.078471"], ["created_at", "2015-05-27 20:32:35.080758"], ["updated_at", "2015-05-27 20:32:35.080758"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'clemmie.schoen@herzog.info' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Andrew Beer MD"], ["email", "clemmie.schoen@herzog.info"], ["encrypted_password", "$2a$10$VjB.vrot1xWsbwWYh.2B8uV5DQBiAiwbo5i46UxIhAXsTmgaha7VS"], ["confirmed_at", "2015-05-27 20:32:35.188773"], ["created_at", "2015-05-27 20:32:35.191456"], ["updated_at", "2015-05-27 20:32:35.191456"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'precious_schuppe@daniel.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Gretchen Koch"], ["email", "precious_schuppe@daniel.net"], ["encrypted_password", "$2a$10$tfanhz/EsaB13RfMSygtyud/KJLoLMR2x/Ohr.ROeVs6GOwcAygB2"], ["confirmed_at", "2015-05-27 20:32:35.291875"], ["created_at", "2015-05-27 20:32:35.293620"], ["updated_at", "2015-05-27 20:32:35.293620"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'candida@ankundinghauck.biz' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Golda Kovacek II"], ["email", "candida@ankundinghauck.biz"], ["encrypted_password", "$2a$10$hWclWjETyMVZeR.G.uLrbuzZVr9f3ACjit0dcY.pnFzlYNpTy0kFK"], ["confirmed_at", "2015-05-27 20:32:35.379660"], ["created_at", "2015-05-27 20:32:35.381518"], ["updated_at", "2015-05-27 20:32:35.381518"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ocie@trompboyer.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Marian Hackett"], ["email", "ocie@trompboyer.com"], ["encrypted_password", "$2a$10$i4gNp3CmQIT6NvD23NqXcul78eICf971z1RY1UVAZQSoHKWBCiLWy"], ["confirmed_at", "2015-05-27 20:32:35.475024"], ["created_at", "2015-05-27 20:32:35.476784"], ["updated_at", "2015-05-27 20:32:35.476784"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"

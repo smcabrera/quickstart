@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def app_name
-    "My App"
+    "Code Camino"
   end
 
   def company_name
